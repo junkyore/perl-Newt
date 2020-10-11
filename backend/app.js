@@ -25,4 +25,5 @@ app.use(cors());
 app.use('/', cryptoRoute);
 
 app.listen(PORT, () => {
-	console.log(
+	console.log(`Running on port ${PORT}`);
+});

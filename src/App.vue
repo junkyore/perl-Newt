@@ -32,4 +32,49 @@ export default {
 		async handleSubmitForm(data) {
 			await axios
 				.post('http://localhost:9000/add-crypto', { name: data })
-				.th
+				.then((res) => {})
+				.catch((e) => {
+					console.log(e);
+				});
+			this.getCryptos();
+		},
+	},
+	computed: {
+		...mapState(['Cryptos', 'CryptoList']),
+	},
+	emits: ['clicked'],
+};
+</script>
+
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background: #24262a;
+	color: #fff;
+}
+.container {
+	text-align: center;
+}
+.logo {
+	img {
+		width: 12em;
+		user-select: none;
+		margin: 3em 0 0;
+	}
+}
+.crypto-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+	gap: 1em;
+	padding: 1em;
+}
+</style>

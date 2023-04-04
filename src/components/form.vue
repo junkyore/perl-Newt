@@ -37,4 +37,40 @@ export default {
 };
 </script>
 
-<style lang="scss"
+<style lang="scss" scoped>
+.form-group {
+	text-align: left;
+	width: 300px;
+	margin: 7em auto;
+}
+label {
+	font-weight: bold;
+	display: inline-block;
+	margin-bottom: 0.7em;
+}
+input {
+	outline: none;
+	padding: 1em;
+	border: none;
+	border-radius: 0.3em 0 0 0.3em;
+	font-size: 1.3em;
+}
+.form-group-inner {
+	display: grid;
+	grid-template-columns: 100px auto;
+	button {
+		font-size: 1em;
+		font-weight: bold;
+		color: #fff;
+		background: #9100ff;
+		border: none;
+		outline: none;
+		padding: 1em 3em;
+		border-radius: 0 0.3em 0.3em 0;
+	}
+}
+p.info {
+	color: #7794b0;
+	margin-top: 0.2em;
+}
+</style>

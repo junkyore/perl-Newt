@@ -42,3 +42,13 @@ export default {
 	background: none;
 	border: none;
 	position: absolute;
+	color: #fff;
+	font-size: 1.5em;
+	right: 1em;
+	bottom: 1em;
+	cursor: pointer;
+	&:hover {
+		color: rgb(218, 218, 218);
+	}
+}
+</style>
